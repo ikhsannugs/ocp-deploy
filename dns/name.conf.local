@@ -1,0 +1,9 @@
+zone "ocp.lan" {
+    type master;
+    file "/etc/bind/db.ocp.lan.forward";
+};
+
+zone "10.29.172.in-addr.arpa" {
+    type master;
+    file "/etc/bind/db.ocp.lan.reverse";
+};
