@@ -1,0 +1,32 @@
+$TTL    604800
+@       IN      SOA     ocp-svc.ocp.lan. contact.ocp.lan (
+                 10     ; Serial
+             604800     ; Refresh
+              86400     ; Retry
+            2419200     ; Expire
+             604800     ; Minimum
+)
+        IN      NS      ocp-svc
+
+ocp-svc.ocp.lan.          IN      A       172.29.10.107
+
+; Temp Bootstrap Node
+ocp-bootstrap.lab.ocp.lan.        IN      A      172.29.10.109
+bastion.lab.ocp.lan.        IN      A      172.29.10.108
+
+; Control Plane Nodes
+master-1.lab.ocp.lan.         IN      A      172.29.10.114
+master-2.lab.ocp.lan.         IN      A      172.29.10.115
+master-3.lab.ocp.lan.         IN      A      172.29.10.116
+
+; Worker Nodes
+worker-1.lab.ocp.lan.        IN      A      172.29.10.117
+worker-2.lab.ocp.lan.        IN      A      172.29.10.118
+
+; OpenShift Internal - Load balancer
+api.lab.ocp.lan.        IN    A    172.29.10.107
+api-int.lab.ocp.lan.    IN    A    172.29.10.107
+*.apps.lab.ocp.lan.     IN    A    172.29.10.107
+
+oauth-openshift.apps.lab.ocp.lan.     IN     A     172.29.10.107
+console-openshift-console.apps.lab.ocp.lan.     IN     A     172.29.10.107
